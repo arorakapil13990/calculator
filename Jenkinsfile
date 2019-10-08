@@ -11,5 +11,10 @@ steps{
 sh "./mvnw test"
 }
 }
+stage('code-coverage'){
+steps{
+sh "./mvnw clean verify"
+}
+}
 }
 }
