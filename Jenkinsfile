@@ -14,6 +14,10 @@ sh "./mvnw test"
 stage('code-coverage'){
 steps{
 sh "./mvnw clean verify"
+publishHTML (target: [
+reportDir: 'build/reports/jacoco/test/html',
+reportFiles: 'index.html',
+reportNsme: "Jacoco Report"])
 }
 }
 }
