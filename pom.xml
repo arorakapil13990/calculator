@@ -86,6 +86,7 @@
 
 
 		</plugins>
+		<finalName>calculator</finalName>
 	</build>
 
 </project>

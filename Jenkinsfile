@@ -11,14 +11,11 @@ steps{
 sh "./mvnw test"
 }
 }
-stage('code-coverage'){
+stage('package'){
 steps{
-sh "./mvnw clean verify"
-publishHTML (target: [
-reportDir: 'build/reports/jacoco/test/html',
-reportFiles: 'index.html',
-reportNsme: "Jacoco Report"])
+sh "./mvnw clean package"
 }
 }
+
 }
 }
