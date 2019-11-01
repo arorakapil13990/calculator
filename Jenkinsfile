@@ -13,7 +13,7 @@ sh "./mvnw test"
 }
 stage('package'){
 steps{
-sh "./mvnw clean package"
+sh "./mvnw clean package	"
 }
 }
 
